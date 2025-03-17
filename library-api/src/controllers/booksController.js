@@ -10,3 +10,13 @@ export const getBookById = (req, res, next) => {
   res.json(book);
 };
 
+export const addBook = (req, res) => {
+  const { title, author, genre } = req.body;
+  if (!title || !author || !genre) {
+    return res.status(400).json({ error: 'All fields are required' });
+  }
+  const newBook = { id: books.length + 1, title, author, genre };
+  books.push(newBook);
+  res.status(201).json(newBook);
+};
+
