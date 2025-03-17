@@ -17,7 +17,7 @@ This is a backend API to manage a library's book collection. It supports CRUD op
 3.1. Start the server: `npm start`
 3.2. For development with hot-reloading: `npm run dev`
 
-## Example Requests (using Postman)
+## Example Requests
 
 ### 1. Retrieve a List of All Books
 
