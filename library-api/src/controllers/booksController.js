@@ -1,4 +1,6 @@
-let books = [];
+let books = [
+  { id: 1, title: 'Example', author: 'Andres Tobar', genre: 'Fiction' }
+];
 
 export const getAllBooks = (req, res) => {
   res.json(books);
