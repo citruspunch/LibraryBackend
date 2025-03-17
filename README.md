@@ -17,7 +17,7 @@ This is a backend API to manage a library's book collection. It supports CRUD op
 3.1. Start the server: `npm start`
 3.2. For development with hot-reloading: `npm run dev`
 
-## Example Requests
+## Example Requests (using Postman)
 
 ### 1. Retrieve a List of All Books
 
@@ -29,15 +29,9 @@ This is a backend API to manage a library's book collection. It supports CRUD op
 [
   {
     "id": 1,
-    "title": "Book Title 1",
-    "author": "Author 1",
-    "genre": "Genre 1"
-  },
-  {
-    "id": 2,
-    "title": "Book Title 2",
-    "author": "Author 2",
-    "genre": "Genre 2"
+    "title": "Example",
+    "author": "Andres Tobar",
+    "genre": "Fiction"
   }
 ]
 ```
@@ -58,7 +52,7 @@ This is a backend API to manage a library's book collection. It supports CRUD op
 **Expected Response**:
 ```json
 {
-  "id": 3,
+  "id": 2,
   "title": "New Book Title",
   "author": "New Author",
   "genre": "New Genre"
@@ -99,3 +93,9 @@ This is a backend API to manage a library's book collection. It supports CRUD op
   "message": "Book deleted successfully"
 }
 ```
+
+### CodeSandbox Link
+https://codesandbox.io/p/github/citruspunch/LibraryBackend/main?import=true
+
+### Postman Collection
+https://winter-escape-9335.postman.co/workspace/Team-Workspace~c02857ee-a8fe-4b43-8bd1-c7fad2ee5c30/collection/43151460-395709ed-5777-4ab8-97c3-f5a652e501ea?action=share&creator=43151460
