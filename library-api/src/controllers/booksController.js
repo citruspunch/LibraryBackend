@@ -33,3 +33,9 @@ export const updateBook = (req, res) => {
   res.json(book);
 };
 
+export const deleteBook = (req, res) => {
+  const bookIndex = books.findIndex(b => b.id === parseInt(req.params.id));
+  if (bookIndex === -1) return res.status(404).json({ error: 'Book not found' });
+  books.splice(bookIndex, 1);
+  res.status(204).end();
+};
