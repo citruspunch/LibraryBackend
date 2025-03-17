@@ -1,3 +1,5 @@
+import { renderToString } from "react-dom/server";
+
 let books = [
   { id: 1, title: 'Example', author: 'Andres Tobar', genre: 'Fiction' }
 ];
@@ -39,5 +41,5 @@ export const deleteBook = (req, res) => {
   const bookIndex = books.findIndex(b => b.id === parseInt(req.params.id));
   if (bookIndex === -1) return res.status(404).json({ error: 'Book not found' });
   books.splice(bookIndex, 1);
-  res.status(204).end();
+  res.status(200).json({message: "Book deleted successfully"});
 };
