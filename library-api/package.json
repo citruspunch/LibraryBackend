@@ -2,11 +2,11 @@
   "name": "library-api",
   "version": "1.0.0",
   "description": "A backend API to manage a library's book collection.",
-  "main": "src/server.ts",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "start": "ts-node src/server.ts",
-    "build": "tsc",
-    "dev": "ts-node-dev src/server.ts"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
