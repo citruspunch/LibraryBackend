@@ -20,3 +20,16 @@ export const addBook = (req, res) => {
   res.status(201).json(newBook);
 };
 
+export const updateBook = (req, res) => {
+  const { title, author, genre } = req.body;
+  const book = books.find(b => b.id === parseInt(req.params.id));
+  if (!book) return res.status(404).json({ error: 'Book not found' });
+  if (!title || !author || !genre) {
+    return res.status(400).json({ error: 'All fields are required' });
+  }
+  book.title = title;
+  book.author = author;
+  book.genre = genre;
+  res.json(book);
+};
+
